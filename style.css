@@ -1,8 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+@import url(http://fonts.googleapis.com/css?family=Nothing+You+Could+Do);
+@import url(http://fonts.googleapis.com/css?family=Just+Another+Hand);
 body {
   background-color: #e51937;
   width: 800px;
   margin: 0 auto;
-  padding: 16pt;
+  padding-bottom: 16pt;
   font-family: "Helvetica"; }
 
 .card, .loading, .loading-card {
@@ -10,7 +13,7 @@ body {
 
 .main {
   background-color: white;
-  border-radius: 16pt;
+  border-radius: 0 0 16pt 16pt;
   padding: 16pt;
   overflow: hidden;
   box-shadow: 0 0 5px #B8142D; }
@@ -37,7 +40,8 @@ body {
       background-color: red; }
   .index h1 {
     margin: 0;
-    font-size: 32pt; }
+    font-size: 80pt;
+    font-family: 'Just Another Hand', cursive; }
   .index p.subheading {
     font-size: 16pt;
     width: 70%;
@@ -52,7 +56,9 @@ body {
 .card {
   position: relative;
   top: -10px;
+  z-index: -100;
   background: white;
+  box-shadow: 0 2px 8px #8b001c;
   padding: 8pt 32pt;
   width: 60%;
   margin: 16pt auto 0 auto; }
