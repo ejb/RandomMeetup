@@ -1,0 +1,38 @@
+<link rel='stylesheet' media='screen' type='text/css' href='style.css' />
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="script.js"></script>
+
+
+
+<p class="results">How about...</p>
+
+
+<div class="main">
+ 
+ <div class="index">   
+    <h1>Random meetup finder</h1>
+        <p class="subheading">Want to discover a new hobby, meet interesting people or just find something to do this week?</p>
+        <button onclick="runApp()">Find me a meetup!</button>
+        <input class="manual" onkeydown="if (event.keyCode == 13) getGoogleLocation()"></input>
+        <p class="">Make sure to allow Random Meetup Finder access to your location, or <a onClick="manualEntry()" href="#">enter your location manually</a>.</p>
+
+</div>
+
+<div class="loading">Loading...</div>
+
+<div class="meetup-details results">
+    <a class="name" href="">Loading name...</a>
+    <div class="img-cont"><img src=""></div>
+    <div class="desc"></div>
+</div>
+
+
+</div>
+    
+<span class="results">No good? <a onClick="runApp();" href="#">Find another meetup</a>.
+
+</div>
+
+<footer>Created by <a href="http://elliotbentley.com/">Elliot Bentley</a>. Powered by the <a href="">Meetup API</a> and <a href="">Google Maps API</a>.</footer>
+

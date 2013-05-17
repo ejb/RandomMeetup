@@ -1,0 +1,53 @@
+body {
+  background-color: #e51937;
+  width: 800px;
+  margin: 0 auto;
+  padding: 16pt;
+  font-family: "Helvetica"; }
+
+.results, .loading {
+  display: none; }
+
+.name {
+  font-size: 40pt; }
+
+.main {
+  background-color: white;
+  border-radius: 16pt;
+  padding: 16pt;
+  overflow: hidden; }
+  .main span {
+    text-align: center; }
+
+.index {
+  text-align: center; }
+
+.index input {
+  display: none;
+  font-size: 24pt;
+  margin: 0 auto; }
+
+.index {
+  text-align: center; }
+  .index button {
+    display: block;
+    font-size: 20pt;
+    background-color: #e51937;
+    border-radius: 8pt;
+    padding: 8pt 14pt;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    margin: 0 auto; }
+    .index button:hover {
+      background-color: red; }
+
+.img-cont {
+  float: right;
+  margin: 10pt 0 0 10pt;
+  width: 30%; }
+  .img-cont img {
+    width: 100%; }
+
+footer {
+  color: white; }
