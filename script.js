@@ -121,10 +121,11 @@ function spawnCard(results){
     cardNumber++;
     var currCard = ".card"+cardNumber;
     console.log(currCard);
-    $('.loading-card').after('<div class="card card'+cardNumber+'"><div class="meetup-details results"><a class="name" href=""></a><div class="img-cont"><img src=""></div><div class="desc"></div></div></div>');
+    $('.loading-card').before('<div class="card card'+cardNumber+'"><div class="meetup-details results"><a class="name" href="/"></a><a href="/" class="img-cont"><img src=""></a><div class="desc"></div></div></div>');
     
     $(currCard+" .name").html(results['name']);
     $(currCard+" a.name").attr("href", results['link']);
+    $(currCard+" a.img-cont").attr("href", results['link']);
     $(currCard+" img").attr("src", results['group_photo']['photo_link']);
     
     if (! results['description']) {
@@ -136,18 +137,19 @@ function spawnCard(results){
         }
         $(currCard+" .desc").html(cleanDesc);
     }
+
+    // $(".loading-card").css({'position':'fixed'});
     
-    $(".loading-card").remove();
 
     stillLoading = 0;
     $(".loading").html("How about this one? Or <a onClick='runApp();' href='#'>find another meetup</a>.");
 
-    $(currCard).slideDown('slow', 'swing');
+    $(currCard).slideDown('medium', 'swing');
     
     $(currCard).animate({
         top: 0,
-      }, 100, function() {
-        // Animation complete.
+      }, 500, function() {
+        $(currCard).css({ 'z-index': 10 });
       });
     
       // var newCardHeight = $(currCard).height();
@@ -159,7 +161,14 @@ function spawnCard(results){
     
     
     $(".results").slideDown();
-    
+
+    $(".loading-card").animate({
+          opacity: 0,
+        }, 100, function() {
+            $(".loading-card").slideUp(500, function() {
+                $(".loading-card").remove();
+            });
+        });
 }
 
 function errorMessage(){

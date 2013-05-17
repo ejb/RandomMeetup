@@ -55,10 +55,11 @@ body {
 
 .card {
   position: relative;
-  top: -10px;
-  z-index: -100;
+  top: -800px;
+  z-index: -1;
   background: white;
   box-shadow: 0 2px 8px #8b001c;
+  border-radius: 2pt;
   padding: 8pt 32pt;
   width: 60%;
   margin: 16pt auto 0 auto; }
@@ -78,6 +79,7 @@ body {
     max-height: 160pt;
     overflow: hidden; }
   .card .meetup-details .img-cont {
+    display: block;
     text-align: center; }
     .card .meetup-details .img-cont img {
       height: 160pt; }

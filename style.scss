@@ -78,11 +78,12 @@ body {
     
     // for animation
     position: relative;
-    top: -10px;
-    z-index: -100;  
+    top: -800px;
+    z-index: -1;
     
     background: white;
     box-shadow: 0 2px 8px #8b001c;
+    border-radius: $bl/4;
     
     padding: $bl $bl*4;
     width: 60%;
@@ -110,9 +111,7 @@ body {
             overflow: hidden;
         }
         .img-cont {
-//          float: right;
-//          margin: $bl 0 0 $bl;
-//          width: 30%;
+            display: block;
           img {
             height: $bl*20; }
             text-align: center;
