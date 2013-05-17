@@ -7,19 +7,19 @@ body {
   width: 800px;
   margin: 0 auto;
   padding: $bl*2;
-  font-family: "Helvetica"; }
+  font-family: "Helvetica";
+}
 
 .results, .loading {
-  display: none; }
-
-.name {
-  font-size: $bl*4; }
+  display: none;
+}
 
 .main {
   background-color: white;
   border-radius: 16pt;
-  padding: 16pt;
+  padding: $bl*2;
   overflow: hidden;
+  box-shadow: 0 0 5px #B8142D;
   span {
     text-align: center; }
 }
@@ -28,27 +28,54 @@ body {
   text-align: center;
   input {
     display: none;
-    font-size: 24pt;
+    font-size: $bl*3;
     margin: 0 auto; }
   button {
     display: block;
-    font-size: 20pt;
+    font-size: $bl*3;
     background-color: #e51937;
-    border-radius: 8pt;
-    padding: 8pt 14pt;
+    border-radius: $bl;
+    padding: $bl $bl*2;
     color: white;
     border: 0;
     cursor: pointer;
     margin: 0 auto;
     &:hover {
-      background-color: red;
-  }
+          background-color: red;
+      }
+    }
+    
+    h1 {
+        margin: 0;
+        font-size: $bl*4;
+    }
+    p.subheading {
+        font-size: $bl*2;
+        width: 70%;
+        margin: $bl*2 auto;
+    }
+    
+    p.manual-note {
+        font-size: $bl;
+        margin: $bl*2 0 0 0;
+    }
+
 }
+
+.meetup-details {
+    .name {
+        font-size: $bl*3;
+        color: black;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .img-cont {
   float: right;
-  margin: 10pt 0 0 10pt;
+  margin: $bl 0 0 $bl;
   width: 30%;
   img {
     width: 100%; }
@@ -56,4 +83,9 @@ body {
 
 footer {
   color: white;
+  font-size: $bl;
+  margin-top: $bl;
+  a {
+      color: white;
+  }
 }
