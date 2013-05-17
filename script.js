@@ -1,5 +1,5 @@
 manual = 0;
-
+cardNumber = 0;
 
 
 function queryMeetup(lat,lon){
@@ -25,14 +25,8 @@ function queryMeetup(lat,lon){
 
 
 function setMeetupDetails(results){
-    $(".loading").html("How about...");
-    $(".name").html(results['name']);
-    $("a.name").attr("href", results['link']);
-    $("img").attr("src", results['group_photo']['photo_link']);
-    results
-    var cleanDesc = results['description'].replace(/(<(?!\/?p(?=>|\s.*>))\/?.*?>)/ig,"");
-    $(".desc").html(cleanDesc);
-    $(".results").slideDown();
+    $(".loading").html("How about this one? Or <a onClick='runApp();' href='#'>find another meetup</a>.");
+    spawnCard(results);
     
 }
 
@@ -58,9 +52,11 @@ function showPosition(position)
 }
 
 function loadStatus(){
-    $(".results").slideUp(); // Clear any old results hanging around
+    // $(".results").slideUp(); // Clear any old results hanging around
     $(".index").slideUp();
     $(".loading").slideDown();
+    $('.main').after('<div class="loading-card">Loading card...</div>');
+    $(".loading-card").slideDown();
 }
 
 function manualEntry(){
@@ -104,5 +100,40 @@ function convertManual(input){
     console.log(input);
     manual[0] = input[0];
     manual[1] = input[1];
+    
+}
+
+
+function spawnCard(results){
+    cardNumber++;
+    var currCard = ".card"+cardNumber;
+    console.log(currCard);
+    $('.loading-card').after('<div class="card card'+cardNumber+'"><div class="meetup-details results"><a class="name" href=""></a><div class="img-cont"><img src=""></div><div class="desc"></div></div></div>');
+    
+    $(currCard+" .name").html(results['name']);
+    $(currCard+" a.name").attr("href", results['link']);
+    $(currCard+" img").attr("src", results['group_photo']['photo_link']);
+    results
+    var cleanDesc = results['description'].replace(/(<(?!\/?p(?=>|\s.*>))\/?.*?>)/ig,"");
+    $(currCard+" .desc").html(cleanDesc);
+    $(".loading-card").remove();
+
+    $(currCard).slideDown('slow', 'swing');
+    
+    $(currCard).animate({
+        top: 0,
+      }, 100, function() {
+        // Animation complete.
+      });
+    
+      // var newCardHeight = $(currCard).height();
+      // $(".card"+(cardNumber-1) ).animate({
+      //     top: '+='+newCardHeight,
+      //   }, 1000, function() {
+      //     // Animation complete.
+      //   });
+    
+    
+    $(".results").slideDown();
     
 }

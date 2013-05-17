@@ -10,7 +10,7 @@ body {
   font-family: "Helvetica";
 }
 
-.results, .loading {
+.card, .loading, .loading-card {
   display: none;
 }
 
@@ -63,6 +63,12 @@ body {
 }
 
 .card {
+    
+    // for animation
+    position: relative;
+    top: -10px;
+    
+    
     background: white;
     padding: $bl $bl*4;
     width: 60%;
@@ -84,6 +90,10 @@ body {
             &:hover {
                 text-decoration: underline;
             }
+        }
+        .desc {
+            max-height: $bl*20;
+            overflow: hidden;
         }
         .img-cont {
 //          float: right;

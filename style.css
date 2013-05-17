@@ -5,7 +5,7 @@ body {
   padding: 16pt;
   font-family: "Helvetica"; }
 
-.results, .loading {
+.card, .loading, .loading-card {
   display: none; }
 
 .main {
@@ -47,6 +47,8 @@ body {
     margin: 16pt 0 0 0; }
 
 .card {
+  position: relative;
+  top: -10px;
   background: white;
   padding: 8pt 32pt;
   width: 60%;
@@ -63,6 +65,9 @@ body {
     border-bottom: 1px solid #DDD; }
     .card .meetup-details .name:hover {
       text-decoration: underline; }
+  .card .meetup-details .desc {
+    max-height: 160pt;
+    overflow: hidden; }
   .card .meetup-details .img-cont {
     text-align: center; }
     .card .meetup-details .img-cont img {
