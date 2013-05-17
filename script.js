@@ -29,7 +29,9 @@ function setMeetupDetails(results){
     $(".name").html(results['name']);
     $("a.name").attr("href", results['link']);
     $("img").attr("src", results['group_photo']['photo_link']);
-    $(".desc").html(results['description']);
+    results
+    var cleanDesc = results['description'].replace(/(<(?!\/?p(?=>|\s.*>))\/?.*?>)/ig,"");
+    $(".desc").html(cleanDesc);
     $(".results").slideDown();
     
 }
