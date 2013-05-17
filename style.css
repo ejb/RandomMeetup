@@ -46,19 +46,28 @@ body {
     font-size: 8pt;
     margin: 16pt 0 0 0; }
 
-.meetup-details .name {
-  font-size: 24pt;
-  color: black;
-  text-decoration: none; }
-  .meetup-details .name:hover {
-    text-decoration: underline; }
-
-.img-cont {
-  float: right;
-  margin: 8pt 0 0 8pt;
-  width: 30%; }
-  .img-cont img {
-    width: 100%; }
+.card {
+  background: white;
+  padding: 8pt;
+  width: 80%;
+  margin: 0 auto; }
+  .card .meetup-details .name {
+    text-align: center;
+    font-size: 32pt;
+    color: black;
+    text-decoration: none;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 8pt;
+    margin-bottom: 8pt;
+    border-bottom: 1px solid #DDD; }
+    .card .meetup-details .name:hover {
+      text-decoration: underline; }
+  .card .meetup-details .img-cont {
+    text-align: center; }
+    .card .meetup-details .img-cont img {
+      height: 160pt; }
 
 footer {
   color: white;
