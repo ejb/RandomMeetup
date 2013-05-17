@@ -48,8 +48,8 @@ body {
 
 .card {
   background: white;
-  padding: 8pt;
-  width: 80%;
+  padding: 8pt 32pt;
+  width: 60%;
   margin: 0 auto; }
   .card .meetup-details .name {
     text-align: center;
@@ -57,7 +57,6 @@ body {
     color: black;
     text-decoration: none;
     display: block;
-    width: 80%;
     margin: 0 auto;
     padding-bottom: 8pt;
     margin-bottom: 8pt;

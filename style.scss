@@ -64,8 +64,8 @@ body {
 
 .card {
     background: white;
-    padding: $bl;
-    width: 80%;
+    padding: $bl $bl*4;
+    width: 60%;
     margin: 0 auto;
     
     .meetup-details {
@@ -75,7 +75,7 @@ body {
             color: black;
             text-decoration: none;
             display: block;
-            width: 80%;
+//            width: 80%;
             margin: 0 auto;
             padding-bottom: $bl;
             margin-bottom: $bl;
