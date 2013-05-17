@@ -1,6 +1,6 @@
 manual = 0;
 cardNumber = 0;
-
+stillLoading = 0;
 
 function queryMeetup(lat,lon){
  
@@ -17,7 +17,7 @@ function queryMeetup(lat,lon){
              setMeetupDetails(json['results'][rand]);
          },
          error:function(){
-             alert("Error");
+             errorMessage();
          },
     });
        
@@ -25,13 +25,24 @@ function queryMeetup(lat,lon){
 
 
 function setMeetupDetails(results){
-    $(".loading").html("How about this one? Or <a onClick='runApp();' href='#'>find another meetup</a>.");
-    spawnCard(results);
-    
+    console.log(results);
+    if(! results){
+        errorMessage();
+    } else {
+        spawnCard(results);        
+    }
 }
 
 
 function runApp() {
+    $(".loading").html("Loading...");
+    stillLoading = 1;
+    setTimeout(function(){
+        if (stillLoading = 0) {
+            $(".loading").html("This is taking a while. It may be worth refreshing?");
+        }
+    },3000);
+
     // if (manual = 0) {
         loadStatus();
         if (navigator.geolocation)
@@ -113,10 +124,18 @@ function spawnCard(results){
     $(currCard+" .name").html(results['name']);
     $(currCard+" a.name").attr("href", results['link']);
     $(currCard+" img").attr("src", results['group_photo']['photo_link']);
-    results
-    var cleanDesc = results['description'].replace(/(<(?!\/?p(?=>|\s.*>))\/?.*?>)/ig,"");
-    $(currCard+" .desc").html(cleanDesc);
+    
+    if (! results['description']) {
+        $(currCard+" .desc").html("<p>No description.</p>");
+    } else {
+        var cleanDesc = results['description'].replace(/(<(?!\/?p(?=>|\s.*>))\/?.*?>)/ig,"");
+        $(currCard+" .desc").html(cleanDesc);
+    }
+    
     $(".loading-card").remove();
+
+    stillLoading = 0;
+    $(".loading").html("How about this one? Or <a onClick='runApp();' href='#'>find another meetup</a>.");
 
     $(currCard).slideDown('slow', 'swing');
     
@@ -136,4 +155,9 @@ function spawnCard(results){
     
     $(".results").slideDown();
     
+}
+
+function errorMessage(){
+    console.log("Problem loading")
+    $(".loading").html("There's a problem, try <a href='javascript:location.reload();'>reloading</a>.");
 }
