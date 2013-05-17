@@ -8,14 +8,12 @@ body {
 .results, .loading {
   display: none; }
 
-.name {
-  font-size: 40pt; }
-
 .main {
   background-color: white;
   border-radius: 16pt;
   padding: 16pt;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 0 0 5px #B8142D; }
   .main span {
     text-align: center; }
 
@@ -27,23 +25,44 @@ body {
     margin: 0 auto; }
   .index button {
     display: block;
-    font-size: 20pt;
+    font-size: 24pt;
     background-color: #e51937;
     border-radius: 8pt;
-    padding: 8pt 14pt;
+    padding: 8pt 16pt;
     color: white;
     border: 0;
     cursor: pointer;
     margin: 0 auto; }
     .index button:hover {
       background-color: red; }
+  .index h1 {
+    margin: 0;
+    font-size: 32pt; }
+  .index p.subheading {
+    font-size: 16pt;
+    width: 70%;
+    margin: 16pt auto; }
+  .index p.manual-note {
+    font-size: 8pt;
+    margin: 16pt 0 0 0; }
+
+.meetup-details .name {
+  font-size: 24pt;
+  color: black;
+  text-decoration: none; }
+  .meetup-details .name:hover {
+    text-decoration: underline; }
 
 .img-cont {
   float: right;
-  margin: 10pt 0 0 10pt;
+  margin: 8pt 0 0 8pt;
   width: 30%; }
   .img-cont img {
     width: 100%; }
 
 footer {
-  color: white; }
+  color: white;
+  font-size: 8pt;
+  margin-top: 8pt; }
+  footer a {
+    color: white; }
