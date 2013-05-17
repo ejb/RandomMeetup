@@ -11,8 +11,9 @@ body {
   background-color: #e51937;
   width: 800px;
   margin: 0 auto;
-  padding-bottom: $bl*2;
+  padding-bottom: $bl*4;
   font-family: "Helvetica";
+  position: relative; // for footer position
 }
 
 .card, .loading, .loading-card {
@@ -54,7 +55,7 @@ body {
         margin: 0;
         font-size: $bl*10;
         font-family: 'Just Another Hand', cursive;
-        
+        font-weight: 400;
     }
     p.subheading {
         font-size: $bl*2;
@@ -126,6 +127,8 @@ footer {
   color: white;
   font-size: $bl;
   margin-top: $bl;
+  bottom: $bl;
+  position: absolute;
   a {
       color: white;
   }

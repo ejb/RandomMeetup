@@ -5,8 +5,9 @@ body {
   background-color: #e51937;
   width: 800px;
   margin: 0 auto;
-  padding-bottom: 16pt;
-  font-family: "Helvetica"; }
+  padding-bottom: 32pt;
+  font-family: "Helvetica";
+  position: relative; }
 
 .card, .loading, .loading-card {
   display: none; }
@@ -41,7 +42,8 @@ body {
   .index h1 {
     margin: 0;
     font-size: 80pt;
-    font-family: 'Just Another Hand', cursive; }
+    font-family: 'Just Another Hand', cursive;
+    font-weight: 400; }
   .index p.subheading {
     font-size: 16pt;
     width: 70%;
@@ -87,6 +89,8 @@ body {
 footer {
   color: white;
   font-size: 8pt;
-  margin-top: 8pt; }
+  margin-top: 8pt;
+  bottom: 8pt;
+  position: absolute; }
   footer a {
     color: white; }

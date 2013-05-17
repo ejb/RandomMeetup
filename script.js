@@ -39,7 +39,7 @@ function runApp() {
     stillLoading = 1;
     setTimeout(function(){
         if (stillLoading = 0) {
-            $(".loading").html("This is taking a while. It may be worth refreshing?");
+            errorMessage();
         }
     },3000);
 
