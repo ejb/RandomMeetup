@@ -66,8 +66,10 @@ function loadStatus(){
     // $(".results").slideUp(); // Clear any old results hanging around
     $(".index").slideUp();
     $(".loading").slideDown();
-    $('.main').after('<div class="loading-card">Loading card...</div>');
+    $('.main').after('<div class="loading-card"><!-- loading --></div>');
     $(".loading-card").slideDown();
+    var target = $(".loading-card").get(0);
+    var spinner = new Spinner().spin(target);
 }
 
 function manualEntry(){
@@ -129,6 +131,9 @@ function spawnCard(results){
         $(currCard+" .desc").html("<p>No description.</p>");
     } else {
         var cleanDesc = results['description'].replace(/(<(?!\/?p(?=>|\s.*>))\/?.*?>)/ig,"");
+        if (! cleanDesc.indexOf("<p>") == 0) {
+            cleanDesc = '<p>'+cleanDesc+'</p>';
+        }
         $(currCard+" .desc").html(cleanDesc);
     }
     
