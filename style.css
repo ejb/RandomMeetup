@@ -50,7 +50,7 @@ body {
   background: white;
   padding: 8pt 32pt;
   width: 60%;
-  margin: 0 auto; }
+  margin: 16pt auto 0 auto; }
   .card .meetup-details .name {
     text-align: center;
     font-size: 32pt;

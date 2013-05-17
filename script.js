@@ -25,7 +25,7 @@ function queryMeetup(lat,lon){
 
 
 function setMeetupDetails(results){
-    $(".loading").slideUp();
+    $(".loading").html("How about...");
     $(".name").html(results['name']);
     $("a.name").attr("href", results['link']);
     $("img").attr("src", results['group_photo']['photo_link']);
