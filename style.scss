@@ -1,31 +1,36 @@
+// baseline
+$bl : 8pt;
+
+
 body {
   background-color: #e51937;
   width: 800px;
   margin: 0 auto;
-  padding: 16pt;
+  padding: $bl*2;
   font-family: "Helvetica"; }
 
 .results, .loading {
   display: none; }
 
 .name {
-  font-size: 32pt; }
+  font-size: $bl*4; }
 
 .main {
   background-color: white;
   border-radius: 16pt;
   padding: 16pt;
-  overflow: hidden; }
-  .main span {
+  overflow: hidden;
+  span {
     text-align: center; }
+}
 
 .index {
-  text-align: center; }
-  .index input {
+  text-align: center;
+  input {
     display: none;
     font-size: 24pt;
     margin: 0 auto; }
-  .index button {
+  button {
     display: block;
     font-size: 20pt;
     background-color: #e51937;
@@ -34,16 +39,21 @@ body {
     color: white;
     border: 0;
     cursor: pointer;
-    margin: 0 auto; }
-    .index button:hover {
-      background-color: red; }
+    margin: 0 auto;
+    &:hover {
+      background-color: red;
+  }
+}
+}
 
 .img-cont {
   float: right;
   margin: 10pt 0 0 10pt;
-  width: 30%; }
-  .img-cont img {
+  width: 30%;
+  img {
     width: 100%; }
+}
 
 footer {
-  color: white; }
+  color: white;
+}
