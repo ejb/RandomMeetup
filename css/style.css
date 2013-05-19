@@ -1,0 +1,96 @@
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+@import url(http://fonts.googleapis.com/css?family=Nothing+You+Could+Do);
+@import url(http://fonts.googleapis.com/css?family=Just+Another+Hand);
+body {
+  background-color: #e51937;
+  width: 800px;
+  margin: 0 auto;
+  padding-bottom: 32pt;
+  font-family: "Helvetica";
+  position: relative; }
+
+.card, .loading, .loading-card {
+  display: none; }
+
+.main {
+  background-color: white;
+  border-radius: 0 0 16pt 16pt;
+  padding: 16pt;
+  overflow: hidden;
+  box-shadow: 0 0 5px #B8142D; }
+  .main span {
+    text-align: center; }
+
+.index {
+  text-align: center; }
+  .index input {
+    display: none;
+    font-size: 24pt;
+    margin: 0 auto; }
+  .index button {
+    display: block;
+    font-size: 24pt;
+    background-color: #e51937;
+    border-radius: 8pt;
+    padding: 8pt 16pt;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    margin: 0 auto; }
+    .index button:hover {
+      background-color: red; }
+  .index h1 {
+    margin: 0;
+    font-size: 80pt;
+    font-family: 'Just Another Hand', cursive;
+    font-weight: 400; }
+  .index p.subheading {
+    font-size: 16pt;
+    width: 70%;
+    margin: 16pt auto; }
+  .index p.manual-note {
+    font-size: 8pt;
+    margin: 16pt 0 0 0; }
+
+.loading-card {
+  padding: 32pt 0 24pt 0; }
+
+.card {
+  position: relative;
+  top: -800px;
+  z-index: -1;
+  background: white;
+  box-shadow: 0 2px 8px #8b001c;
+  border-radius: 2pt;
+  padding: 8pt 32pt;
+  width: 60%;
+  margin: 16pt auto 0 auto; }
+  .card .meetup-details .name {
+    text-align: center;
+    font-size: 32pt;
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 8pt;
+    margin-bottom: 8pt;
+    border-bottom: 1px solid #DDD; }
+    .card .meetup-details .name:hover {
+      text-decoration: underline; }
+  .card .meetup-details .desc {
+    max-height: 160pt;
+    overflow: hidden; }
+  .card .meetup-details .img-cont {
+    display: block;
+    text-align: center; }
+    .card .meetup-details .img-cont img {
+      height: 160pt; }
+
+footer {
+  color: white;
+  font-size: 8pt;
+  margin-top: 8pt;
+  bottom: 8pt;
+  position: absolute; }
+  footer a {
+    color: white; }
