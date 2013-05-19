@@ -16,24 +16,18 @@
  <div class="index">   
     <h1>Random meetup finder</h1>
         <p class="subheading">Want to discover a new hobby, meet interesting people or just find something to do this week?</p>
-        <button onclick="runApp()">Find me a meetup!</button>
+        <button onclick="getGeolocation()">Find me a meetup!</button>
         <input class="manual" onkeydown="if (event.keyCode == 13) getGoogleLocation()"></input>
-        <p class="manual-note">Make sure to allow Random Meetup Finder access to your location, or <a onClick="manualEntry()" href="#">enter your location manually</a>.</p>
+        <p class="manual-note">Make sure to allow Random Meetup Finder access to your location, or <a onClick="manualEntryReveal()" href="#">enter your location manually</a>.</p>
 
 </div>
 
 <div class="loading">Loading...</div>
 
-<div class="meetup-details results">
-    <a class="name" href="">Loading name...</a>
-    <div class="img-cont"><img src=""></div>
-    <div class="desc"></div>
-</div>
 
 
 </div>
     
-<span class="results">No good? <a onClick="runApp();" href="#">Find another meetup</a>.</span>
 
 </div>
 
