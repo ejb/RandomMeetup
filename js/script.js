@@ -97,7 +97,7 @@ function loadStatus(){
         if (stillLoading == 1) {
             errorMessage();
         }
-    },3000);
+    },5000);
     
     
     // $(".results").slideUp(); // Clear any old results hanging around
